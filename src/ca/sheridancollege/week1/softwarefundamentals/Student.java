@@ -7,7 +7,7 @@ package ca.sheridancollege.week1.softwarefundamentals;
 
 /**
  *
- * @author asidhu and varghese
+ * @author asidhu
  */
 public class Student {
     
