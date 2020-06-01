@@ -14,41 +14,56 @@ public class CardTester
 {
    
     public static void main(String[] args)
-    {    Card c1 = new Card();
-         
-         Card[] store=new Card[7];
-        
-        Card ob[]=new Card[7];
-        Card luckyCard=new Card("Ace","Spades");
        
+     {    Card c1 = new Card();
+         
+          Card[] store=new Card[7];
+        
+         Card ob[]=new Card[7];
+         Card luckyCard=new Card("Ace","Spades");
+       
+        int h=0;
        
         for(int j=0;j<7;j++)
-                {   ob[j]=new Card();
+                {  
+                    ob[j]=new Card();
+                   
                     store[j]=ob[j].randomCard();
                                
                       if(ob[j].getValue()==luckyCard.getValue())
-                         {
+                          
+                           {
                               if(ob[j].getSuit()==luckyCard.getSuit())
-                               {
-                                   System.out.println("card found!!");
-                             
-                                }
+                                 {
+                                   h=0;
+                                    
+                                 }
                          else
                               { 
-                                  System.out.println("not found");
-                                
+                                  
+                                   h=1;
                               }
-                          }
-                    else
-                    
-                        { System.out.println("no luck!");
                            
-                        }
+                           }
+                             
+                           else
+                                h=1;
+                         
+                   }
+          if(h==1)
+             { 
+                 System.out.println("Card not found!");
+             }
+        
+             
+               else
+          
+               System.out.println("The card is in the lucky deck!!!");
                     
                 
                 } 
     }
-}
+
     
      
 
